@@ -5,6 +5,7 @@
 
 html {
     font-size: 62.5%;
+    font-family: "Lato", sans-serif;
 }
 
 body {
@@ -18,8 +19,7 @@ body {
 }
 
 section {
-    border: 1px solid black;
-    width: 50%;
+    width: 30%;
     height: 100vh;
     background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
     background-size: cover;
@@ -30,18 +30,24 @@ section {
     align-items: center;
 }
 
+section p {
+    color: white;
+}
+
 main {
-    width: 50%;
+    width: 70%;
     height: 100vh;
+    font-size: 2rem;
+    background-color: rgb(249, 250, 251);
 }
 
 .logo-container {
-    font-family: "Norse Bold";
+    font-family: "Norse Bold", sans-serif;
     background-color: rgba(0, 0, 0, 0.461);
     display: flex;
     align-items: center;
     font-size: 5rem;
-    height: 12%;
+    height: 15%;
     margin-top: 50%;
     justify-content: center;
     width: 100%;
@@ -58,4 +64,120 @@ main {
 h1 {
     margin: 0;
     height: 5rem;
+}
+
+.linebreak::before {
+    content: "\A";
+    white-space: pre-wrap;
+}
+
+.padding-container {
+    padding: 0 5%;
+}
+
+.padding-container:first-child {
+    margin-top: 10%;
+    padding-right: 25%;
+}
+
+.form-container {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    padding: 2% 5% 5% 5%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 3px 3px;
+    background-color: white;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+}
+
+form label {
+    margin-top: 10%;
+    color: rgb(99, 105, 114);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+form input {
+    width: 70%;
+    padding: 0.6rem 1rem;
+    border: 1px solid #E5E7EB;
+    margin-top: 3px;
+}
+
+input:focus {
+    border: 3px solid blue;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+input:user-invalid {
+    border: 1px solid red;
+}
+
+input:user-valid {
+    border: 1px solid green;
+}
+
+.optional {
+    color: #596D48;
+}
+
+.form-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    color: #000000;
+    font-weight: 700;
+}
+
+button {
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    background-color: #596D48;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #748d5e;
+}
+
+button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+}
+
+a:hover {
+    color: #748d5e;
+}
+
+button + p {
+    font-weight: 400;
+}
+
+.error::after {
+    color: red;
+    content: " Passwords do not match";
 }

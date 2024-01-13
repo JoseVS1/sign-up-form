@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Sign-up Form</title>
 </head>
@@ -16,7 +19,48 @@
 
             <p>Photo by <span class="underlined">Halie West</span> on <span class="underlined">Unsplash</span></p>
         </section>
-        <main></main>
+        <main>
+            <div class="padding-container">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <span class="linebreak">Sign up <i>now</i> to get started.</span></p>
+                <p>You <i>know</i> you want to.</p>                
+            </div>
+
+            <div class="form-container">
+                <h2>Let's do this!</h2>
+
+                <form id="signup-form">
+                    <div class="form-left">
+                        <label for="first-name">FIRST NAME *</label>
+                        <input type="text" name="first-name" id="first-name" maxlength="20" required>
+
+                        <label for="email">EMAIL *</label>
+                        <input type="email" name="email" id="email" required>
+
+                        <label for="password">PASSWORD *</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    
+                    <div class="form-right">
+                        <label for="last-name">LAST NAME <span class="optional">(OPTIONAL)</span></label>
+                        <input type="text" name="last-name" id="last-name" maxlength="20">
+
+                        <label for="phone">PHONE NUMBER <span class="optional">(OPTIONAL)</span></label>
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name="phone" id="phone">
+
+                        <label for="con-password">CONFIRM PASSWORD *</label>
+                        <input type="password" name="con-password" id="con-password" required>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="padding-container">
+                <button form="signup-form">Create Account</button>
+
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </main>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
